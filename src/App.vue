@@ -7,16 +7,16 @@
 </template>
 
 <script>
-import Actions from './components/Actions';
-import Getters from './components/Getters';
-import Modules from './components/Modules';
+import Actions from './components/Actions'
+import Getters from './components/Getters'
+import Modules from './components/Modules'
 
 export default {
   name: 'app',
   components: {
     Actions,
     Getters,
-    Modules,
-  },
-};
+    Modules
+  }
+}
 </script>

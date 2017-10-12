@@ -6,17 +6,17 @@
 </template>
 
 <script>
-  import { mapActions, mapGetters } from 'vuex';
+  import { mapActions, mapGetters } from 'vuex'
 
-  export default{
+export default{
     methods: {
       ...mapActions([
-        'moduleActionClick',
-      ]),
+        'moduleActionClick'
+      ])
     },
 
     computed: mapGetters([
-      'moduleClicks',
-    ]),
-  };
+      'moduleClicks'
+    ])
+  }
 </script>

@@ -6,19 +6,19 @@
 </template>
 
 <script>
-  import { mapActions } from 'vuex';
+  import { mapActions } from 'vuex'
 
-  export default{
+export default{
     methods: {
       ...mapActions([
-        'actionClick',
+        'actionClick'
       ]),
-      actionInputIfTrue: function actionInputIfTrue(event) {
-        const inputValue = event.target.value;
+      actionInputIfTrue: function actionInputIfTrue (event) {
+        const inputValue = event.target.value
         if (inputValue === 'input') {
-          this.$store.dispatch('actionInput', { inputValue });
+          this.$store.dispatch('actionInput', { inputValue })
         }
-      },
-    },
-  };
+      }
+    }
+  }
 </script>
