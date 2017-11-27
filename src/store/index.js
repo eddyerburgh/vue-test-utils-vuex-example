@@ -37,5 +37,3 @@ export default new Vuex.Store({
     inputValue: state => state.inputValue
   }
 })
-
-Vue.use(Vuex)
