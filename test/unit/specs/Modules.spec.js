@@ -24,9 +24,13 @@ describe('Modules.vue', () => {
     }
 
     store = new Vuex.Store({
-      state,
-      actions,
-      getters: module.getters
+      modules: {
+        module: {
+          state,
+          actions,
+          getters: module.getters
+        }
+      }
     })
   })
 
