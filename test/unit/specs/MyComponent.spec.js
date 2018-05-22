@@ -44,6 +44,6 @@ describe('Modules.vue', () => {
   it('Renders state.inputValue in first p tag', () => {
     const wrapper = shallow(MyComponent, { store, localVue })
     const p = wrapper.find('p')
-    expect(p.text()).toBe(state.module.clicks.toString())
+    expect(p.text()).toBe(state.clicks.toString())
   })
 })
