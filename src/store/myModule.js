@@ -1,13 +1,11 @@
 export default {
   state: {
-    module: {
-      clicks: 2
-    }
+    clicks: 2
   },
 
   mutations: {
     INCREMENT_MODULE_ACTION_CLICKS (state) {
-      state.module.clicks++
+      state.clicks++
     }
   },
 
@@ -18,6 +16,6 @@ export default {
   },
 
   getters: {
-    moduleClicks: state => state.module.clicks
+    moduleClicks: state => state.clicks
   }
 }

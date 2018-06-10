@@ -1,7 +1,7 @@
 import { shallow, createLocalVue } from 'vue-test-utils'
 import Vuex from 'vuex'
 import MyComponent from '../../../src/components/MyComponent'
-import mymodule from '../../../src/store/mymodule'
+import myModule from '../../../src/store/myModule'
 
 const localVue = createLocalVue()
 
@@ -14,9 +14,7 @@ describe('Modules.vue', () => {
 
   beforeEach(() => {
     state = {
-      module: {
-        clicks: 2
-      }
+      clicks: 2
     }
 
     actions = {
@@ -25,10 +23,10 @@ describe('Modules.vue', () => {
 
     store = new Vuex.Store({
       modules: {
-        mymodule: {
+        myModule: {
           state,
           actions,
-          getters: module.getters
+          getters: myModule.getters
         }
       }
     })
@@ -41,7 +39,7 @@ describe('Modules.vue', () => {
     expect(actions.moduleActionClick).toHaveBeenCalled()
   })
 
-  it('Renders state.inputValue in first p tag', () => {
+  it('renders state.inputValue in first p tag', () => {
     const wrapper = shallow(MyComponent, { store, localVue })
     const p = wrapper.find('p')
     expect(p.text()).toBe(state.clicks.toString())
